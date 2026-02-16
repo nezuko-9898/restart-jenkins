@@ -1,5 +1,10 @@
-console.log("Hello MR Node To Jenkins")
-console.log("Hello MR Node To Jenkins")
-console.log("Hello MR Jenkins")
+const http = require("http");
 
-console.log("Hello MR node")
+const server = http.createServer((req, res) => {
+    res.write("Hello Node.js Project");
+    res.end();
+});
+
+server.listen(3000, () => {
+    console.log("Server running on port 3000");
+});
